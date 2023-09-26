@@ -1,0 +1,14 @@
+
+ Test Local Connection
+
+Before attempting to connect from another computer, test the installation locally.
+
+1. Open a Command Prompt and run this command to subscribe to a topic called `test_topic`:
+       
+    `mosquitto_sub -h localhost -t test_topic`
+    
+2. Open another Command Prompt and run this command to publish a message to `test_topic`:
+    
+      `mosquitto_pub -h localhost -t test_topic -m "Hello, World!"`
+    
+3. If everything is set up correctly, the message "Hello, World!" should appear in the window where `mosquitto_sub` is running.
