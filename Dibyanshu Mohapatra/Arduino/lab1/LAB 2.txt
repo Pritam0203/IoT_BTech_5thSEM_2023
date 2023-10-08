@@ -1,0 +1,22 @@
+// Declare a variable for the LED pin
+int ledPin = 13;
+// The setup function runs once when you press reset or power the board
+void setup() {
+// Initialize the digital pin as an output for the LED.
+pinMode(ledPin, OUTPUT);
+// Initialize serial communication with a baud rate of 9600.
+Serial.begin(9600);
+}
+// The loop function runs over and over again forever
+void loop() {
+// Turn the LED on
+digitalWrite(ledPin, HIGH);
+// Wait for one second
+delay(1000);
+// Turn the LED off
+digitalWrite(ledPin, LOW);
+// Wait for one second
+delay(1000);
+// Send a message to the serial monitor on your computer
+Serial.println("LED is blinking");
+}
