@@ -1,0 +1,22 @@
+Write an Arduino program to blink a light continuously and print the status of the light at each stage.
+
+
+Code :
+int Led = 2;
+
+void setup()
+{
+  pinMode(Led, OUTPUT);
+  
+  Serial.begin(2000);
+}
+
+void loop()
+{
+  Serial.print("Led is ON. \n");
+  digitalWrite(Led, HIGH);
+  delay(1000);
+  Serial.print("Led is OFF. \n");
+  digitalWrite(Led, LOW);
+  delay(1000);
+}
